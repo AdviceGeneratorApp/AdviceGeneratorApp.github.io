@@ -10,7 +10,7 @@ function generateAdvice() {
     fetch('https://api.adviceslip.com/advice')
         .then(res => res.json())
         .then(res => {
-            adviceNumber.textContent = `${res.slip.ip}`
+            adviceNumber.textContent = `${res.slip.id}`
             advice.textContent = `"${res.slip.advice}"`
         })
 }
