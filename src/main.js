@@ -10,13 +10,11 @@ function generateAdvice() {
     fetch('https://api.adviceslip.com/advice')
         .then(res => res.json())
         .then(res => {
+            adviceNumber.textContent = `"${res.slip.ip}"`
             advice.textContent = `"${res.slip.advice}"`
         })
 }
 
 generateAdvice()
 
-button.addEventListener('click', () => {
-    adviceNumber.textContent = `${parseInt(adviceNumber.textContent) + 1}`
-    generateAdvice()
-})
+button.addEventListener('click', generateAdvice)
