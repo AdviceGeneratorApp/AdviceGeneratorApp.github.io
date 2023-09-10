@@ -83,6 +83,7 @@ button:focus {
 
 .icon-dice {
     width: 40%;
+    user-select: none;
 }
 
 .attribution { 
